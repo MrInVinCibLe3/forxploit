@@ -1,0 +1,83 @@
+        @import 'https://fonts.googleapis.com/css?family=Bangers';
+body{
+    font-family: "VT323", monospace; 
+    background-color: black;
+}
+h1{
+    color: #34fc47;
+}
+button {
+    font-family: "VT323", monospace; 
+ --glow-color: rgb(176, 255, 186);
+ --glow-spread-color: rgba(123, 255, 123, 0.781);
+ --enhanced-glow-color: rgb(212, 255, 206);
+ --btn-color: rgb(64, 136, 61);
+ border: .25em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+button::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+.randnum {
+    font-family: Bangers;
+    font-size: 35px;
+    font-family: 'Bungee Spice', sans-serif;
+font-family: 'Dela Gothic One', sans-serif;
+font-family: 'Honk', system-ui;
+}
+mark{
+    background-color: red;
+}
+#timer {
+      text-align: center;
+      font-size: 45px;
+      padding: 20px;
+      font-family: Bangers;
+      color: red;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    #timer.expired {
+      transform: scale(1.1);
+      background-color: rgb(64, 136, 61);
+    }
+
+
+   
